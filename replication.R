@@ -10,6 +10,7 @@ X <- rnorm(n, 3, 1) # X for the linear simulations
 X_un <- runif(n, -3, 3) # X for the non-linear simulation
 
 epsilon <- rnorm(n, 0, 4) # Error term
+
 x_terciles <- as.factor(findInterval(X, quantile(X, c(1/3, 2/3))) + 1) # Terciles for X
 levels(x_terciles) <- c("X: Low", "X: Med", "X: High")
 
